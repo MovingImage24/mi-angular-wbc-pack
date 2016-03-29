@@ -1,6 +1,6 @@
 {
   "name": "mi-angular-wbc-pack",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Some directvies and more for project WBC ... based on AngularJS 1",
   "author": {
     "name": "MovingIMAGE24",
@@ -22,8 +22,7 @@
   "bugs": {
     "url": "https://github.com/MovingImage24/mi-angular-wbc-pack/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "angular": "^1.5.0",
     "jscs": "^2.11.0",
