@@ -25,8 +25,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "angular": "^1.4.8",
-    "jscs": "^2.7.0",
+    "angular": "^1.5.0",
+    "jscs": "^2.11.0",
     "ng-annotate-webpack-plugin": "^0.1.2",
     "webpack": "^1.12.9"
   },
