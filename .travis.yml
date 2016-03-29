@@ -8,12 +8,12 @@ node_js:
 - '4.3'
 - '4.4'
 before_install: npm install -g npm@'>=2.13.5'
-#deploy:
-#  provider: npm
-#  email: dasrick@gmail.com
-#  api_key:
-#    secure: E6/WwWg0MuxjI+hbFamPjECH5IEB9ZYubliZkSTUK3OW4cHfQff43mJjfa0ta0GptUIgRHg/QxU+AW1EY/Vqnak6Mhw1VU1a3QXDmPIUy0tr8Ett8u1RRTqQ59UAOXI34Ze2wxbxBaAyIhxmrUtOsEb5rN7lO4L71Ax7MplNX5Kkpv7iA5KuIr9sYnsgwUEXLG9zHcQMyOSO+ELesNplwGCHpQYzS1/MdVFRZN5qq3XWTrss26W2NsIqC0y/BiQQHgvzbyAb4IaOemLpajfMJSLbdDqRFnp9xYXytnHqSNEsaK2tWKAyZZAj+KdyO1o7tZcoytG5C194RatoUC0eHJGiHFmZRnsB7tyxMMhUl4nszVM1r/DnXIZ7G24+wHmq0AyosBg7fYtMLOVi8JjJK8YzYLpdbUeG6XVH4AIZkkEzRklOWF3QijLcKhtKJZB2wfWBWGhS/Hmy+9GvM7H9JEfJSX7zpQZ81mCXuI8TSaXhUOHv5MNaRcma4gHjOz2yw7lPvrC2tnDWlHmfV1F85IR/6m+C8JTtn2lFsrhfReR5v9y5nSwOROvmYzjpphj978f3e76LyyiIj7Fk2/irp0J1yUBq+C/0fzqPtJYjljgJCSqWJKeJE93hObwS6//No+2n1pq3T7vZON6tfndhZ5NPRcC2UJ5cT4UzpYlgBGY=
-#  on:
-#    tags: true
-#    repo: MovingImage24/mi-angular-wbc-pack
-#    node: '4.4'
+deploy:
+  provider: npm
+  email: dasrick@gmail.com
+  api_key:
+    secure: XeGeXSx2iFm8ecJfXvO1UHJvDUb/mk3YuptGxNwjZIXqf8/43/nZw6gpzVIRe6P2Yf1RkHWDSjFPUx61icXyKz1V648dOw645en62s1A3R2jtJrzgTfQiXTeXV0whDAatLE3FGsSYxRmaGsWvbQ6weBX7rO5t3oxo6dOM+cBvjMxwxzaTfIpz2lwm00Zf0Zzeg5AMaFUNjmUEHZIKENVZReyljMKmzgYkzJV3H8k1ReCZo1j7FmW6u32aHao8uEfS+dZ97W06l4RESed3KYM+l8UnHEenl/b7Ip+1kR2qPvtiIpepFZwKGv2Whe4csuxtuDMUINQnf9j7OVPqOat5NgCRPWqQXJucMNCscXB262xRa6JFqRn2QS2k/6s0c+uGGhP7yvjSw0fXoBYigX4fvu5S+H036Gyf0cqfjKr94NSuI8ArAjGT9BLn19q2SFV876R4Z4hDlPiTaECuSY+HADqIF6Y5JNRrjdXl8JBSbCE7pTht0j0XRPzWUxJWTmcBu0fAPqHTBquW0CIGV7RNSTR2SC15W+ZvTJNycT4NiSUV0RAle4RhlK7B6YnxX6YEhm3vXyIYAIl54+hsjXOYT2NTGJuTusX93AoJbYkYBDOHgw51DaHiiwz5CRgX7Ks6MI8qCV6JlYDRqs9X57OTxmV/rIYNCktmp7MVJruRhU=
+  on:
+    tags: true
+    repo: MovingImage24/mi-angular-wbc-pack
+    node: '4.4'
