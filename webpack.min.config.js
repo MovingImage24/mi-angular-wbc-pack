@@ -2,7 +2,7 @@
 
 var webpack = require('webpack');
 var path = require('path');
-var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var NgAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var srcPath = path.resolve(__dirname, 'src', 'index.js');
 var dstPath = path.resolve(__dirname, 'dist');
 
@@ -13,7 +13,7 @@ module.exports = {
     filename: 'mi-angular-wbc-pack.min.js'
   },
   plugins: [
-    new ngAnnotatePlugin({add: true}),
+    new NgAnnotatePlugin({add: true}),
     new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin()
