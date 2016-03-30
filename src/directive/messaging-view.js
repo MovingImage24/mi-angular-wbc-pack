@@ -30,9 +30,11 @@ module.exports = angular
 
     $scope.$watch('msgCtrl.messages', function () {
       scrollToBottom();
-      $timeout(function () {
-        $scope.$messagingInput.focus();
-      }, 200);
+      if (angular.isDefined($scope.$messagingInput)) {
+        $timeout(function () {
+          $scope.$messagingInput.focus();
+        }, 200);
+      }
     });
     $scope.$watch('msgCtrl.messages.length', function () {
       if (!$scope.historyLoading) {
