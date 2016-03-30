@@ -23,12 +23,12 @@
     "url": "https://github.com/MovingImage24/mi-angular-wbc-pack/issues"
   },
   "dependencies": {
-    "ng-lodash": "^0.2.3"
   },
   "devDependencies": {
     "angular": "^1.5.0",
     "jscs": "^2.11.0",
     "ng-annotate-webpack-plugin": "^0.1.2",
+    "ng-lodash": "^0.2.3",
     "webpack": "^1.12.9"
   },
   "scripts": {
