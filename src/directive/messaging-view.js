@@ -30,7 +30,7 @@ module.exports = angular
 
     $scope.$watch('msgCtrl.messages', function () {
       scrollToBottom();
-      if (angular.isDefined($scope.$messagingInput)) {
+      if (angular.isDefined($scope.$messagingInput) && angular.isElement($scope.$messagingInput)) {
         $timeout(function () {
           $scope.$messagingInput.focus();
         }, 200);
