@@ -4,7 +4,7 @@ var tplName = 'mi-angular-wbc-pack/template/1col-centerbox.html';
 module.exports = angular.module(tplName, [])
   .run(['$templateCache', function ($templateCache) {
     $templateCache.put(tplName,
-      '<aside class="cs-1 col-main-full">' +
+      '<aside class="cs-1 col-main-full content">' +
       '<div class="box-outer">' +
       '<div class="box-inner">' +
       '<div class="box-content">' +
