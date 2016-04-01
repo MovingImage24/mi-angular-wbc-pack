@@ -1,4 +1,5 @@
 'use strict';
+require("./style.less");
 var tplName = 'mi-angular-wbc-pack/template/1col-centerbox.html';
 module.exports = angular.module(tplName, [])
   .run(['$templateCache', function ($templateCache) {

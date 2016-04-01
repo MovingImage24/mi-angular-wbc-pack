@@ -25,9 +25,13 @@
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.5.0",
+    "css-loader": "^0.23.1",
     "jscs": "^2.11.0",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
     "ng-annotate-webpack-plugin": "^0.1.2",
     "ng-lodash": "^0.2.3",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.9"
   },
   "scripts": {

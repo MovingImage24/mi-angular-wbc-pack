@@ -13,6 +13,14 @@ module.exports = {
     filename: 'mi-angular-wbc-pack.js'
   },
   devtool: 'inline-source-map',
+  module: {
+    loaders: [
+      {
+        test: /\.less$/,
+        loader: 'style!css!less'
+      }
+    ]
+  },
   plugins: [
     new NgAnnotatePlugin({add: true}),
     new webpack.optimize.OccurenceOrderPlugin(),

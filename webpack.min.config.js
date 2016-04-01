@@ -12,6 +12,14 @@ module.exports = {
     path: dstPath,
     filename: 'mi-angular-wbc-pack.min.js'
   },
+  module: {
+    loaders: [
+      {
+        test: /\.less$/,
+        loader: 'style!css!less'
+      }
+    ]
+  },
   plugins: [
     new NgAnnotatePlugin({add: true}),
     new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
