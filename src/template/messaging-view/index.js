@@ -1,6 +1,6 @@
 'use strict';
-var tplName = 'mi/template/messaging-view.html';
-angular.module(tplName, [])
+var tplName = 'mi-angular-wbc-pack/template/messaging-view.html';
+module.exports = angular.module(tplName, [])
   .run(['$templateCache', function ($templateCache) {
     $templateCache.put(tplName,
       '<div class="mi-messaging">' +

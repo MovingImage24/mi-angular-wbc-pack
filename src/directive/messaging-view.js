@@ -7,7 +7,7 @@
 require('ng-lodash');
 
 module.exports = angular
-  .module('mi.WbcPack.MessagingView', ['mi/template/messaging-view.html', 'ngLodash'])
+  .module('mi.WbcPack.MessagingView', ['mi-angular-wbc-pack/template/messaging-view.html', 'ngLodash'])
 
   // controller ////////////////////////////////////////////////////////////////////////////////////////////////////////
   .controller('MiMessagingViewController', ['$scope', '$timeout', function ($scope, $timeout) {
@@ -58,7 +58,7 @@ module.exports = angular
       controller: 'MiMessagingViewController',
       controllerAs: 'msgCtrl',
       templateUrl: function (element, attrs) {
-        return attrs.templateUrl || 'mi/template/messaging-view.html';
+        return attrs.templateUrl || 'mi-angular-wbc-pack/template/messaging-view.html';
       },
       scope: {
         messages: '=',

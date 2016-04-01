@@ -1,6 +1,6 @@
 'use strict';
-var tplName = 'mi/template/1col-centerbox.html';
-angular.module(tplName, [])
+var tplName = 'mi-angular-wbc-pack/template/1col-centerbox.html';
+module.exports = angular.module(tplName, [])
   .run(['$templateCache', function ($templateCache) {
     $templateCache.put(tplName,
       '<aside class="cs-1 col-main-full">' +
