@@ -7,7 +7,7 @@
 require('ng-lodash');
 
 module.exports = angular
-  .module('mi.WbcPack.MessagingView', ['mi/template/messaging.html', 'ngLodash'])
+  .module('mi.WbcPack.MessagingView', ['mi/template/messaging-view.html', 'ngLodash'])
 
   // controller ////////////////////////////////////////////////////////////////////////////////////////////////////////
   .controller('MiMessagingViewController', ['$scope', '$timeout', function ($scope, $timeout) {
@@ -58,7 +58,7 @@ module.exports = angular
       controller: 'MiMessagingViewController',
       controllerAs: 'msgCtrl',
       templateUrl: function (element, attrs) {
-        return attrs.templateUrl || 'mi/template/messaging.html';
+        return attrs.templateUrl || 'mi/template/messaging-view.html';
       },
       scope: {
         messages: '=',
@@ -102,23 +102,3 @@ module.exports = angular
     };
   }])
 ;
-
-angular.module('mi/template/messaging.html', []).run(['$templateCache', function ($templateCache) {
-  $templateCache.put('mi/template/messaging.html',
-    '<div class="mi-messaging">' +
-    '<div class="messaging-header">' +
-    '<h3>{{msgCtrl.title}}</h3>' +
-    '</div>' +
-    '<div class="messaging-message" ng-repeat="message in msgCtrl.messages" ng-class="{\'self-authored\': (msgCtrl.username == message.username)}">' +
-    '<p>{{message.content}}</p>' +
-    '<p>{{message.username}}</p>' +
-    '</div>' +
-    '<div class="messaging-footer">' +
-    '<form ng-submit="msgCtrl.submitCall()">' +
-    '<input type="text" class="messaging-input-field" placeholder="{{msgCtrl.inputPlaceholderText}}" ng-model="msgCtrl.message"/>' +
-    '<input type="submit" class="messaging-submit-button" value="{{msgCtrl.submitButtonText}}"/>' +
-    '</form>' +
-    '</div>' +
-    '</div>'
-  );
-}]);
