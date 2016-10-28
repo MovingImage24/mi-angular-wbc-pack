@@ -18,7 +18,6 @@ module.exports = angular
     vm.inputPlaceholderText = $scope.inputPlaceholderText;
     vm.submitButtonText = $scope.submitButtonText;
     vm.title = $scope.title;
-    vm.theme = angular.fromJson($scope.theme);
     vm.message = '';
 
     vm.submitCall = submitCall;
