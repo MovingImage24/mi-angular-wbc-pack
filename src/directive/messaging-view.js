@@ -19,7 +19,7 @@ module.exports = angular
     vm.submitButtonText = $scope.submitButtonText;
     vm.title = $scope.title;
     vm.message = '';
-
+    vm.theme = angular.fromJson($scope.theme);
     vm.submitCall = submitCall;
 
     function submitCall() {
@@ -66,6 +66,7 @@ module.exports = angular
         title: '@',
         inputPlaceholderText: '@',
         submitButtonText: '@',
+        theme: '@',
         submitCallback: '&'
       },
       link: function (scope, element) {
