@@ -7,9 +7,9 @@ node_js:
 before_install: npm install -g npm@'>=2.13.5'
 deploy:
   provider: npm
-  email: dasrick@gmail.com
+  email: admin@movingimage24.com
   api_key:
-    secure: XeGeXSx2iFm8ecJfXvO1UHJvDUb/mk3YuptGxNwjZIXqf8/43/nZw6gpzVIRe6P2Yf1RkHWDSjFPUx61icXyKz1V648dOw645en62s1A3R2jtJrzgTfQiXTeXV0whDAatLE3FGsSYxRmaGsWvbQ6weBX7rO5t3oxo6dOM+cBvjMxwxzaTfIpz2lwm00Zf0Zzeg5AMaFUNjmUEHZIKENVZReyljMKmzgYkzJV3H8k1ReCZo1j7FmW6u32aHao8uEfS+dZ97W06l4RESed3KYM+l8UnHEenl/b7Ip+1kR2qPvtiIpepFZwKGv2Whe4csuxtuDMUINQnf9j7OVPqOat5NgCRPWqQXJucMNCscXB262xRa6JFqRn2QS2k/6s0c+uGGhP7yvjSw0fXoBYigX4fvu5S+H036Gyf0cqfjKr94NSuI8ArAjGT9BLn19q2SFV876R4Z4hDlPiTaECuSY+HADqIF6Y5JNRrjdXl8JBSbCE7pTht0j0XRPzWUxJWTmcBu0fAPqHTBquW0CIGV7RNSTR2SC15W+ZvTJNycT4NiSUV0RAle4RhlK7B6YnxX6YEhm3vXyIYAIl54+hsjXOYT2NTGJuTusX93AoJbYkYBDOHgw51DaHiiwz5CRgX7Ks6MI8qCV6JlYDRqs9X57OTxmV/rIYNCktmp7MVJruRhU=
+    secure: $NPM_TOKEN
   on:
     tags: true
     repo: MovingImage24/mi-angular-wbc-pack
