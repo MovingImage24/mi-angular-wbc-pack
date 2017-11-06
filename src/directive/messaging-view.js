@@ -20,12 +20,19 @@ module.exports = angular
     vm.title = $scope.title;
     vm.message = '';
     vm.theme = angular.fromJson($scope.theme);
+    vm.disabled = false;
     vm.submitCall = submitCall;
+
+    function toggleDisabled() {
+      vm.disabled = true;
+      $timeout(function() { vm.disabled = false; }, 10000);
+    }
 
     function submitCall() {
       $scope.submitCallback()(vm.message, vm.username);
       vm.message = '';
       scrollToBottom();
+      toggleDisabled();
     }
 
     $scope.$watch('msgCtrl.messages', function () {
