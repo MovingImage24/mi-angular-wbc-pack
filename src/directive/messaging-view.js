@@ -10,7 +10,7 @@ module.exports = angular
   .module('mi.WbcPack.MessagingView', ['mi-angular-wbc-pack/template/messaging-view.html', 'ngLodash'])
 
   // controller ////////////////////////////////////////////////////////////////////////////////////////////////////////
-  .controller('MiMessagingViewController', ['$scope', '$timeout', function ($scope, $timeout) {
+  .controller('MiMessagingViewController', ['$scope', '$timeout', '$interval', function ($scope, $timeout, $interval) {
     var vm = this;
 
     vm.messages = $scope.messages;
