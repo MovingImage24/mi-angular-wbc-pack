@@ -20,12 +20,21 @@ module.exports = angular
     vm.title = $scope.title;
     vm.message = '';
     vm.theme = angular.fromJson($scope.theme);
-    vm.disabled = false;
+    vm.sendDisabled = false;
+    vm.sendDisabledTimer = 10;
     vm.submitCall = submitCall;
 
     function toggleDisabled() {
-      vm.disabled = true;
-      $timeout(function() { vm.disabled = false; }, 10000);
+      vm.sendDisabled = true;
+      var int = $interval(function() {
+        vm.sendDisabledTimer--;
+
+        if (vm.sendDisabledTimer === 0) {
+          $interval.cancel(int);
+          vm.sendDisabledTimer = 10;
+          vm.sendDisabled = false;
+        }
+      }, 1000);
     }
 
     function submitCall() {
