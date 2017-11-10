@@ -10,7 +10,7 @@ module.exports = angular
   .module('mi.WbcPack.MessagingView', ['mi-angular-wbc-pack/template/messaging-view.html', 'ngLodash'])
 
   // controller ////////////////////////////////////////////////////////////////////////////////////////////////////////
-  .controller('MiMessagingViewController', ['$scope', '$timeout', function ($scope, $timeout) {
+  .controller('MiMessagingViewController', ['$scope', '$timeout', '$interval', function ($scope, $timeout, $interval) {
     var vm = this;
 
     vm.messages = $scope.messages;
@@ -20,12 +20,28 @@ module.exports = angular
     vm.title = $scope.title;
     vm.message = '';
     vm.theme = angular.fromJson($scope.theme);
+    vm.sendDisabled = false;
+    vm.sendDisabledTimer = 10;
     vm.submitCall = submitCall;
+
+    function toggleDisabled() {
+      vm.sendDisabled = true;
+      var int = $interval(function() {
+        vm.sendDisabledTimer--;
+
+        if (vm.sendDisabledTimer === 0) {
+          $interval.cancel(int);
+          vm.sendDisabledTimer = 10;
+          vm.sendDisabled = false;
+        }
+      }, 1000);
+    }
 
     function submitCall() {
       $scope.submitCallback()(vm.message, vm.username);
       vm.message = '';
       scrollToBottom();
+      toggleDisabled();
     }
 
     $scope.$watch('msgCtrl.messages', function () {

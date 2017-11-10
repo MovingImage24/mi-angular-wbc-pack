@@ -35,7 +35,7 @@
     "webpack": "^1.12.9"
   },
   "scripts": {
-    "prebuild:js": "jscs ./src ./test",
+    "prebuild:js": "jscs ./src",
     "build": "npm run build:js && npm run build:js-min",
     "build:js": "webpack --config webpack.config.js",
     "build:js-min": "webpack --config webpack.min.config.js",
