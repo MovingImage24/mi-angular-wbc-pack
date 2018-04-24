@@ -1,8 +1,7 @@
 language: node_js
 node_js:
-- '4'
-- '5'
-before_install: npm install -g npm@'>=2.13.5'
+- '7'
+before_install: npm install -g npm@'>=4.2.0'
 deploy:
   provider: npm
   email: admin@movingimage24.com
@@ -11,4 +10,4 @@ deploy:
   on:
     tags: true
     repo: MovingImage24/mi-angular-wbc-pack
-    node: '4'
+    node: '7'
