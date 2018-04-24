@@ -15,10 +15,13 @@ module.exports = angular
 
     vm.messages = $scope.messages;
     vm.username = $scope.username;
+    vm.gdprIsactive = $scope.gdprIsactive;
+    vm.gdprData = $scope.gdprData;
     vm.inputPlaceholderText = $scope.inputPlaceholderText;
     vm.submitButtonText = $scope.submitButtonText;
     vm.title = $scope.title;
     vm.message = '';
+    vm.gdprAgreement = false;
     vm.theme = angular.fromJson($scope.theme);
     vm.sendDisabled = false;
     vm.sendDisabledTimer = 10;
@@ -38,7 +41,7 @@ module.exports = angular
     }
 
     function submitCall() {
-      $scope.submitCallback()(vm.message, vm.username);
+      $scope.submitCallback()(vm.message, vm.username, vm.gdprAgreement);
       vm.message = '';
       scrollToBottom();
       toggleDisabled();
@@ -79,6 +82,8 @@ module.exports = angular
       scope: {
         messages: '=',
         username: '=',
+        gdprIsactive: '=',
+        gdprData: '=',
         title: '@',
         inputPlaceholderText: '@',
         submitButtonText: '@',
