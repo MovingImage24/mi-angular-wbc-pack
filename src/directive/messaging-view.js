@@ -21,6 +21,7 @@ module.exports = angular
     vm.submitButtonText = $scope.submitButtonText;
     vm.title = $scope.title;
     vm.message = '';
+    vm.moderated = $scope.moderated;
     vm.gdprAgreement = false;
     vm.theme = angular.fromJson($scope.theme);
     vm.sendDisabled = false;
@@ -89,7 +90,7 @@ module.exports = angular
         submitButtonText: '@',
         theme: '@',
         submitCallback: '&',
-        moderated: '@'
+        moderated: '='
       },
       link: function (scope, element) {
         // header
