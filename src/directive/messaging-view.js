@@ -88,7 +88,8 @@ module.exports = angular
         inputPlaceholderText: '@',
         submitButtonText: '@',
         theme: '@',
-        submitCallback: '&'
+        submitCallback: '&',
+        moderated: '@'
       },
       link: function (scope, element) {
         // header
