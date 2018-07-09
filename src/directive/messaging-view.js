@@ -14,7 +14,9 @@ module.exports = angular
     var vm = this;
 
     vm.messages = $scope.messages;
-    vm.username = $scope.username;
+    vm.firstname = $scope.firstname;
+    vm.surname = $scope.surname;
+    vm.companyName = $scope.companyName;
     vm.gdprIsactive = $scope.gdprIsactive;
     vm.gdprData = $scope.gdprData;
     vm.inputPlaceholderText = $scope.inputPlaceholderText;
@@ -42,7 +44,7 @@ module.exports = angular
     }
 
     function submitCall() {
-      $scope.submitCallback()(vm.message, vm.username, vm.gdprAgreement);
+      $scope.submitCallback()(vm.message, vm.firstname, vm.surname, vm.companyName, vm.gdprAgreement);
       vm.message = '';
       scrollToBottom();
       toggleDisabled();
