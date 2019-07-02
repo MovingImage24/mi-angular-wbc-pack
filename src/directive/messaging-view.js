@@ -26,6 +26,7 @@ module.exports = angular
     vm.moderated = $scope.moderated;
     vm.gdprAgreement = false;
     vm.theme = angular.fromJson($scope.theme);
+    vm.layout = angular.fromJson($scope.layout);
     vm.sendDisabled = false;
     vm.sendDisabledTimer = 10;
     vm.submitCall = submitCall;
