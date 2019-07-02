@@ -91,6 +91,7 @@ module.exports = angular
         inputPlaceholderText: '@',
         submitButtonText: '@',
         theme: '@',
+        layout: '@',
         submitCallback: '&',
         moderated: '='
       },
